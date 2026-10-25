@@ -29,10 +29,20 @@ def delete_document(doc_id: str) -> None:
     _collection.delete(where={"doc_id": doc_id})
 
 
+def reindex_document(doc_id: str, chunks: list[Chunk]) -> None:
+    delete_document(doc_id)
+    add_chunks(chunks)
+
+
 def search(query: str, k: int = 3) -> list[dict]:
     res = _collection.query(query_embeddings=[embed_query(query)], n_results=k)
     return [
-        {"text": t, "heading": m["heading"], "distance": d}
+        {
+            "text": t,
+            "heading": m["heading"],
+            "doc_id": m["doc_id"],
+            "distance": d,
+        }
         for t, m, d in zip(
             res["documents"][0], res["metadatas"][0], res["distances"][0]
         )

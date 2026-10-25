@@ -1,0 +1,6 @@
+ollama
+numpy
+markitdown[docx,pdf]
+python-docx
+tokenizers
+chromadb

@@ -6,3 +6,7 @@ tokenizers
 chromadb
 fastapi
 uvicorn[standard]
+sqlalchemy
+bcrypt
+pyjwt
+httpx

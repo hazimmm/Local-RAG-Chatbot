@@ -5,9 +5,14 @@ from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 
+from app.api import routes_admin, routes_auth
+from app.db import Base, engine
 from app.rag.generator import answer_stream
 
 app = FastAPI(title="Local RAG Chatbot")
+Base.metadata.create_all(engine)
+app.include_router(routes_auth.router)
+app.include_router(routes_admin.router)
 
 
 @app.get("/health")

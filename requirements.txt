@@ -4,3 +4,5 @@ markitdown[docx,pdf]
 python-docx
 tokenizers
 chromadb
+fastapi
+uvicorn[standard]

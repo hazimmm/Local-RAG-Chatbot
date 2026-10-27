@@ -1,6 +1,6 @@
 ollama
 numpy
-markitdown[docx,pdf]
+markitdown[docx,pdf,xlsx]
 python-docx
 tokenizers
 chromadb
@@ -12,3 +12,5 @@ pyjwt
 httpx
 python-multipart
 streamlit
+openpyxl
+fpdf2

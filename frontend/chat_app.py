@@ -112,12 +112,20 @@ def render_sources(answer: str, sources: list[dict]) -> None:
             st.caption(s["text"][:300] + ("…" if len(s["text"]) > 300 else ""))
 
 
+def searched_note(question: str, rewritten: str | None) -> str | None:
+    if rewritten and rewritten.strip().lower() != question.strip().lower():
+        return f"🔁 Understood as: {rewritten}"
+    return None
+
+
 def render_history() -> None:
     for m in st.session_state.messages:
         with st.chat_message(m["role"]):
             st.markdown(m["content"])
             if m["role"] == "assistant":
                 render_sources(m["content"], m.get("sources", []))
+                if m.get("note"):
+                    st.caption(m["note"])
 
 
 def answer_question(question: str) -> None:
@@ -127,7 +135,7 @@ def answer_question(question: str) -> None:
     with st.chat_message("user"):
         st.markdown(question)
 
-    captured = {"sources": []}
+    captured = {"sources": [], "rewritten": None}
     with st.chat_message("assistant"):
         waiting = st.empty()
         waiting.caption("🔎 Searching the knowledge base…")
@@ -138,6 +146,7 @@ def answer_question(question: str) -> None:
             ):
                 if event["type"] == "meta":
                     st.session_state.session_id = event["session_id"]
+                    captured["rewritten"] = event.get("rewritten")
                 elif event["type"] == "sources":
                     captured["sources"] = event["sources"]
                     waiting.caption("✍️ Writing the answer…")
@@ -154,9 +163,17 @@ def answer_question(question: str) -> None:
             st.session_state.messages.pop()
             return
         render_sources(answer, captured["sources"])
+        note = searched_note(question, captured["rewritten"])
+        if note:
+            st.caption(note)
 
     st.session_state.messages.append(
-        {"role": "assistant", "content": answer, "sources": captured["sources"]}
+        {
+            "role": "assistant",
+            "content": answer,
+            "sources": captured["sources"],
+            "note": note,
+        }
     )
     st.rerun()
 

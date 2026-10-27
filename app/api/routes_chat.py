@@ -9,6 +9,7 @@ from app.auth import get_current_user
 from app.db import SessionLocal, get_db
 from app.models import ChatSession, Message, User
 from app.rag.generator import answer_stream
+from app.rag.rewrite import rewrite_question
 
 router = APIRouter(tags=["chat"])
 
@@ -49,8 +50,12 @@ def chat(
     user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
+    history: list[dict] = []
     if req.session_id:
         session = get_owned_session(db, req.session_id, user)
+        history = [
+            {"role": m.role, "content": m.content} for m in session.messages
+        ]
     else:
         session = ChatSession(user_id=user.id, title=req.question[:60])
         db.add(session)
@@ -59,12 +64,19 @@ def chat(
     db.commit()
     session_id = session.id
 
-    sources, tokens = answer_stream(req.question, k=req.k)
+    rewritten = rewrite_question(history, req.question)
+    sources, tokens = answer_stream(req.question, req.k, rewritten)
 
     def events():
         parts: list[str] = []
         try:
-            yield sse({"type": "meta", "session_id": session_id})
+            yield sse(
+                {
+                    "type": "meta",
+                    "session_id": session_id,
+                    "rewritten": rewritten,
+                }
+            )
             yield sse({"type": "sources", "sources": sources})
             for t in tokens:
                 parts.append(t)

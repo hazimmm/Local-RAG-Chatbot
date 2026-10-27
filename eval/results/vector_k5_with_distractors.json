@@ -1,0 +1,464 @@
+{
+  "overall": {
+    "n": 30,
+    "hit@1": 0.9333333333333333,
+    "recall@1": 0.8833333333333333,
+    "hit@3": 0.9666666666666667,
+    "recall@3": 0.95,
+    "hit@5": 1.0,
+    "recall@5": 0.9833333333333333,
+    "mrr": 0.9583333333333334
+  },
+  "rows": [
+    {
+      "id": "q001",
+      "type": "paraphrase",
+      "question": "If I'm ill for a week, when does the company want a doctor's note?",
+      "rank": 1,
+      "top_dist": 0.2818591594696045,
+      "got": [
+        "hr_leave_and_benefits.docx | Sick Leave",
+        "expense_policy.docx | Acme Bank Travel and Expense Policy",
+        "hr_leave_and_benefits.docx | Annual Leave"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q002",
+      "type": "paraphrase",
+      "question": "What's the most I can spend on a room per night when travelling to a big city?",
+      "rank": 1,
+      "top_dist": 0.29391372203826904,
+      "got": [
+        "expense_policy.docx | Flights and Hotels",
+        "procurement_policy.docx | Supplier Travel",
+        "insurance_faq.md | What is the premium for travel insurance?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q003",
+      "type": "table",
+      "question": "Who needs to sign off on a 1,500 dollar expense?",
+      "rank": 1,
+      "top_dist": 0.3565852642059326,
+      "got": [
+        "expense_policy.docx | Approval Limits",
+        "expense_policy.docx | Acme Bank Travel and Expense Policy",
+        "procurement_policy.docx | Supplier Travel"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q004",
+      "type": "boundary",
+      "question": "Who approves spending of exactly 2,000 dollars?",
+      "rank": 1,
+      "top_dist": 0.3036813735961914,
+      "got": [
+        "expense_policy.docx | Approval Limits",
+        "procurement_policy.docx | Purchase Order Approval Limits",
+        "expense_policy.docx | Mileage"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q005",
+      "type": "table",
+      "question": "How many free ATM withdrawals come with the Plus Current account?",
+      "rank": 1,
+      "top_dist": 0.23226004838943481,
+      "got": [
+        "fee_schedule.xlsx | Account fees",
+        "customer_faq.md | What are the daily withdrawal limits?",
+        "customer_faq.md | What are the transfer limits?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q006",
+      "type": "table",
+      "question": "Which account has no monthly fee but needs at least 100 dollars kept in it?",
+      "rank": 1,
+      "top_dist": 0.29898005723953247,
+      "got": [
+        "fee_schedule.xlsx | Account fees",
+        "fee_schedule.xlsx | Service charges",
+        "customer_faq.md | How do I open a savings account?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q007",
+      "type": "numeric",
+      "question": "How much does it cost to get a new cheque book?",
+      "rank": 1,
+      "top_dist": 0.304496705532074,
+      "got": [
+        "fee_schedule.xlsx | Service charges",
+        "facilities_guide.docx | Access Badges",
+        "customer_faq.md | What are the transfer limits?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q008",
+      "type": "distractor",
+      "question": "How much is a replacement debit card?",
+      "rank": 1,
+      "top_dist": 0.30070602893829346,
+      "got": [
+        "fee_schedule.xlsx | Service charges",
+        "customer_faq.md | What should I do if my card is lost or stolen?",
+        "customer_faq.md | What are the daily withdrawal limits?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q009",
+      "type": "paraphrase",
+      "question": "What do I do right away if my card gets stolen?",
+      "rank": 1,
+      "top_dist": 0.23397552967071533,
+      "got": [
+        "customer_faq.md | What should I do if my card is lost or stolen?",
+        "insurance_faq.md | What should I do if my insurance card is lost?",
+        "facilities_guide.docx | Access Badges"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q010",
+      "type": "paraphrase",
+      "question": "How long until my money arrives when I send it abroad?",
+      "rank": 1,
+      "top_dist": 0.30154770612716675,
+      "got": [
+        "customer_faq.md | How long do transfers take?",
+        "expense_policy.docx | Acme Bank Travel and Expense Policy",
+        "fee_schedule.xlsx | Service charges"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q011",
+      "type": "reasoning",
+      "question": "Can I transfer 40,000 dollars online in one day?",
+      "rank": 1,
+      "top_dist": 0.2707505226135254,
+      "got": [
+        "customer_faq.md | What are the transfer limits?",
+        "customer_faq.md | How long do transfers take?",
+        "customer_faq.md | What are the daily withdrawal limits?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q012",
+      "type": "distractor",
+      "question": "What is the interest rate for the Premium Saver?",
+      "rank": 1,
+      "top_dist": 0.2126891016960144,
+      "got": [
+        "customer_faq.md | What is the interest rate on savings accounts?",
+        "fee_schedule.xlsx | Account fees",
+        "insurance_faq.md | What is the premium for travel insurance?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q013",
+      "type": "pdf",
+      "question": "Who should a new hire contact with expense questions?",
+      "rank": 1,
+      "top_dist": 0.3431636095046997,
+      "got": [
+        "onboarding_guide.pdf | ",
+        "expense_policy.docx | Acme Bank Travel and Expense Policy",
+        "expense_policy.docx | Approval Limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q014",
+      "type": "pdf",
+      "question": "What happens if a new employee doesn't finish their mandatory training?",
+      "rank": 1,
+      "top_dist": 0.31338590383529663,
+      "got": [
+        "onboarding_guide.pdf | ",
+        "hr_leave_and_benefits.docx | Sick Leave",
+        "facilities_guide.docx | Access Badges"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q015",
+      "type": "pdf",
+      "question": "Between what times can I start work if I arrange flexible hours?",
+      "rank": 2,
+      "top_dist": 0.3521648645401001,
+      "got": [
+        "insurance_faq.md | When are the insurance service centres open?",
+        "onboarding_guide.pdf | ",
+        "handbook.docx | Branch Hours"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q016",
+      "type": "direct",
+      "question": "Can I carry over leave to next year?",
+      "rank": 1,
+      "top_dist": 0.2983192205429077,
+      "got": [
+        "hr_leave_and_benefits.docx | Annual Leave",
+        "hr_leave_and_benefits.docx | Sick Leave",
+        "handbook.docx | Leave Policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q017",
+      "type": "distractor",
+      "question": "How many weeks of parental leave does the non-primary caregiver get?",
+      "rank": 1,
+      "top_dist": 0.1750507354736328,
+      "got": [
+        "hr_leave_and_benefits.docx | Parental Leave",
+        "handbook.docx | Leave Policy",
+        "hr_leave_and_benefits.docx | Bereavement and Unpaid Leave"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q018",
+      "type": "reasoning",
+      "question": "When can new hires start using their annual leave?",
+      "rank": 4,
+      "top_dist": 0.23957401514053345,
+      "got": [
+        "hr_leave_and_benefits.docx | Annual Leave",
+        "handbook.docx | Leave Policy",
+        "onboarding_guide.pdf | "
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q019",
+      "type": "negation",
+      "question": "Is dental insurance included in my benefits?",
+      "rank": 1,
+      "top_dist": 0.27959781885147095,
+      "got": [
+        "hr_leave_and_benefits.docx | Health Benefits",
+        "hr_leave_and_benefits.docx | Acme Bank Leave and Benefits Policy",
+        "procurement_policy.docx | Acme Bank Procurement Policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q020",
+      "type": "paraphrase",
+      "question": "How long do I have to report a lost laptop?",
+      "rank": 1,
+      "top_dist": 0.26338255405426025,
+      "got": [
+        "it_security_policy.docx | Devices",
+        "procurement_policy.docx | Equipment Purchases",
+        "it_security_policy.docx | Phishing and Incident Reporting"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q021",
+      "type": "distractor",
+      "question": "Can I reuse an old password?",
+      "rank": 1,
+      "top_dist": 0.31811434030532837,
+      "got": [
+        "it_security_policy.docx | Passwords and Authentication",
+        "handbook.docx | Password Policy",
+        "facilities_guide.docx | Guest Wi-Fi"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q022",
+      "type": "paraphrase",
+      "question": "How quickly does the security team classify a breach report?",
+      "rank": 1,
+      "top_dist": 0.24692797660827637,
+      "got": [
+        "it_security_policy.docx | Phishing and Incident Reporting",
+        "it_security_policy.docx | Devices",
+        "procurement_policy.docx | Equipment Purchases"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q023",
+      "type": "table",
+      "question": "What handling rules apply to customer account records?",
+      "rank": 1,
+      "top_dist": 0.3178277015686035,
+      "got": [
+        "it_security_policy.docx | Data Classification",
+        "it_security_policy.docx | Devices",
+        "it_security_policy.docx | Phishing and Incident Reporting"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q024",
+      "type": "reasoning",
+      "question": "Can I work from a cafe using public Wi-Fi?",
+      "rank": 1,
+      "top_dist": 0.32115471363067627,
+      "got": [
+        "it_security_policy.docx | Remote Access",
+        "facilities_guide.docx | Guest Wi-Fi",
+        "it_security_policy.docx | Devices"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q025",
+      "type": "cross-doc",
+      "question": "What time does the branch close on Saturday?",
+      "rank": 1,
+      "top_dist": 0.2573434114456177,
+      "got": [
+        "customer_faq.md | What are the branch opening hours?",
+        "handbook.docx | Branch Hours",
+        "facilities_guide.docx | Building Hours"
+      ],
+      "recall@1": 0.5,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q026",
+      "type": "cross-doc",
+      "question": "How do I reset my password?",
+      "rank": 1,
+      "top_dist": 0.2388930320739746,
+      "got": [
+        "handbook.docx | Password Policy",
+        "it_security_policy.docx | Passwords and Authentication",
+        "facilities_guide.docx | Guest Wi-Fi"
+      ],
+      "recall@1": 0.5,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q027",
+      "type": "cross-doc",
+      "question": "Which extension do I call if I can't log in on my first day?",
+      "rank": 1,
+      "top_dist": 0.3530832529067993,
+      "got": [
+        "onboarding_guide.pdf | ",
+        "insurance_faq.md | What should I do if my insurance card is lost?",
+        "customer_faq.md | What should I do if my card is lost or stolen?"
+      ],
+      "recall@1": 0.5,
+      "recall@3": 0.5,
+      "recall@5": 0.5
+    },
+    {
+      "id": "q028",
+      "type": "negation",
+      "question": "Are alcoholic drinks covered on a business trip?",
+      "rank": 1,
+      "top_dist": 0.2841607332229614,
+      "got": [
+        "expense_policy.docx | Meals",
+        "expense_policy.docx | Flights and Hotels",
+        "procurement_policy.docx | Supplier Travel"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q029",
+      "type": "reasoning",
+      "question": "I submitted my expense claim on the 25th. When do I get paid?",
+      "rank": 1,
+      "top_dist": 0.2867361903190613,
+      "got": [
+        "expense_policy.docx | Reimbursement Timeline",
+        "insurance_faq.md | How long does a claim take to pay?",
+        "insurance_faq.md | How do I make a claim?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "q030",
+      "type": "direct",
+      "question": "How much notice do I need to give to take annual leave?",
+      "rank": 1,
+      "top_dist": 0.2166961431503296,
+      "got": [
+        "hr_leave_and_benefits.docx | Annual Leave",
+        "handbook.docx | Leave Policy",
+        "hr_leave_and_benefits.docx | Sick Leave"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    }
+  ]
+}

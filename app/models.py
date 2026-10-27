@@ -31,6 +31,7 @@ class Document(Base):
 
     id: Mapped[str] = mapped_column(String, primary_key=True, default=new_id)
     filename: Mapped[str] = mapped_column(String)
+    content_hash: Mapped[str] = mapped_column(String, index=True)
     status: Mapped[str] = mapped_column(String, default="processing")
     error: Mapped[str | None] = mapped_column(Text, default=None)
     chunk_count: Mapped[int] = mapped_column(default=0)

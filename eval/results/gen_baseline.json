@@ -1,0 +1,608 @@
+{
+  "summary": {
+    "answerable_n": 30,
+    "correct (not refused + key facts)": 27,
+    "false_refusals": 0,
+    "unanswerable_n": 6,
+    "correct_refusals": 5,
+    "faithful_of_non_refused": "10/31"
+  },
+  "rows": [
+    {
+      "id": "q001",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "If I'm ill for a week, when does the company want a doctor's note?",
+      "answer": "According to the context, a medical certificate is required when sick leave lasts more than 3 consecutive days. Since you're ill for a week, which is 7 days, the company wants a doctor's note for the 4th day of absence (day 4 of the 7-day period).",
+      "refused": false,
+      "retrieved": [
+        "Sick Leave",
+        "Acme Bank Travel and Expense Policy",
+        "Annual Leave",
+        "Leave Policy"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q002",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "What's the most I can spend on a room per night when travelling to a big city?",
+      "answer": "According to the Acme Bank Travel and Expense Policy, hotel stays are capped at 180 dollars per night in major cities.",
+      "refused": false,
+      "retrieved": [
+        "Flights and Hotels",
+        "Meals",
+        "Approval Limits",
+        "Mileage"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q003",
+      "type": "table",
+      "answerable": true,
+      "question": "Who needs to sign off on a 1,500 dollar expense?",
+      "answer": "According to the Acme Bank Travel and Expense Policy, expenses over 2,000 dollars require the Finance director's approval [1]. Since 1,500 dollars is below the 2,000 dollar threshold, the Finance director is not required to sign off on this expense. However, the employee must still submit the claim within 30 days with original receipts and obtain approval from their line manager, as the line manager is responsible for approving expenses up to 2,000 dollars [2].",
+      "refused": false,
+      "retrieved": [
+        "Approval Limits",
+        "Acme Bank Travel and Expense Policy",
+        "Service charges",
+        "Flights and Hotels"
+      ],
+      "facts_ok": false,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q004",
+      "type": "boundary",
+      "answerable": true,
+      "question": "Who approves spending of exactly 2,000 dollars?",
+      "answer": "According to the Acme Bank Travel and Expense Policy, spending of exactly 2,000 dollars is approved by the Department head. [1]",
+      "refused": false,
+      "retrieved": [
+        "Approval Limits",
+        "Mileage",
+        "Meals",
+        "Flights and Hotels"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q005",
+      "type": "table",
+      "answerable": true,
+      "question": "How many free ATM withdrawals come with the Plus Current account?",
+      "answer": "The Plus Current account comes with 10 free ATM withdrawals. [1]",
+      "refused": false,
+      "retrieved": [
+        "Account fees",
+        "What are the daily withdrawal limits?",
+        "What are the transfer limits?",
+        "Passwords and Authentication"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q006",
+      "type": "table",
+      "answerable": true,
+      "question": "Which account has no monthly fee but needs at least 100 dollars kept in it?",
+      "answer": "The Everyday Saver account has no monthly fee, but it requires a minimum balance of 100 dollars to be kept in it.",
+      "refused": false,
+      "retrieved": [
+        "Account fees",
+        "Service charges",
+        "How do I open a savings account?",
+        "What is the interest rate on savings accounts?"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q007",
+      "type": "numeric",
+      "answerable": true,
+      "question": "How much does it cost to get a new cheque book?",
+      "answer": "According to the provided context, the fee for a cheque book is 12 dollars. [1]",
+      "refused": false,
+      "retrieved": [
+        "Service charges",
+        "What are the transfer limits?",
+        "Flights and Hotels",
+        "Approval Limits"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q008",
+      "type": "distractor",
+      "answerable": true,
+      "question": "How much is a replacement debit card?",
+      "answer": "According to the provided context, the replacement card fee is $10. [1]",
+      "refused": false,
+      "retrieved": [
+        "Service charges",
+        "What should I do if my card is lost or stolen?",
+        "What are the daily withdrawal limits?",
+        "Account fees"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q009",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "What do I do right away if my card gets stolen?",
+      "answer": "Freeze the card in the mobile app straight away, then call 0800 555 0199 at any time.",
+      "refused": false,
+      "retrieved": [
+        "What should I do if my card is lost or stolen?",
+        "Phishing and Incident Reporting",
+        "Devices",
+        "Service charges"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q010",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "How long until my money arrives when I send it abroad?",
+      "answer": "According to the provided context, international transfers take 2 to 4 business days.",
+      "refused": false,
+      "retrieved": [
+        "How long do transfers take?",
+        "Acme Bank Travel and Expense Policy",
+        "Service charges",
+        "What should I do if my card is lost or stolen?"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q011",
+      "type": "reasoning",
+      "answerable": true,
+      "question": "Can I transfer 40,000 dollars online in one day?",
+      "answer": "No, you cannot transfer 40,000 dollars online in one day. According to the Acme Bank Customer FAQ, online transfers are limited to 25,000 dollars per day. [1]",
+      "refused": false,
+      "retrieved": [
+        "What are the transfer limits?",
+        "How long do transfers take?",
+        "What are the daily withdrawal limits?",
+        "Acme Bank Travel and Expense Policy"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q012",
+      "type": "distractor",
+      "answerable": true,
+      "question": "What is the interest rate for the Premium Saver?",
+      "answer": "The interest rate for the Premium Saver is 3.4 percent per year for balances above $10,000. [1]",
+      "refused": false,
+      "retrieved": [
+        "What is the interest rate on savings accounts?",
+        "Account fees",
+        "Mileage",
+        "Health Benefits"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q013",
+      "type": "pdf",
+      "answerable": true,
+      "question": "Who should a new hire contact with expense questions?",
+      "answer": "According to the provided documents, a new hire should contact the Finance team with expense questions.",
+      "refused": false,
+      "retrieved": [
+        "",
+        "Acme Bank Travel and Expense Policy",
+        "Approval Limits",
+        "Service charges"
+      ],
+      "facts_ok": false,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q014",
+      "type": "pdf",
+      "answerable": true,
+      "question": "What happens if a new employee doesn't finish their mandatory training?",
+      "answer": "If a new employee doesn't complete anti-money-laundering and data privacy training within 30 days, it may delay system access.",
+      "refused": false,
+      "retrieved": [
+        "",
+        "Sick Leave",
+        "Annual Leave",
+        "Acme Bank Travel and Expense Policy"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q015",
+      "type": "pdf",
+      "answerable": true,
+      "question": "Between what times can I start work if I arrange flexible hours?",
+      "answer": "You can agree on a flexible start time between 7:30am and 9:30am with your manager. [1]",
+      "refused": false,
+      "retrieved": [
+        "",
+        "Branch Hours",
+        "What are the branch opening hours?",
+        "Annual Leave"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q016",
+      "type": "direct",
+      "answerable": true,
+      "question": "Can I carry over leave to next year?",
+      "answer": "Yes, up to 5 unused days of annual leave can be carried over to the next year. [1]",
+      "refused": false,
+      "retrieved": [
+        "Annual Leave",
+        "Sick Leave",
+        "Leave Policy",
+        "Parental Leave"
+      ],
+      "facts_ok": false,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q017",
+      "type": "distractor",
+      "answerable": true,
+      "question": "How many weeks of parental leave does the non-primary caregiver get?",
+      "answer": "Secondary caregivers receive 4 weeks of paid parental leave.",
+      "refused": false,
+      "retrieved": [
+        "Parental Leave",
+        "Leave Policy",
+        "Bereavement and Unpaid Leave",
+        "Annual Leave"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q018",
+      "type": "reasoning",
+      "answerable": true,
+      "question": "When can new hires start using their annual leave?",
+      "answer": "New hires can start using their annual leave after the completion of their probation period, which is 3 months. However, with manager approval, they can take annual leave during the probation period.\n\n[1], [2], [4]",
+      "refused": false,
+      "retrieved": [
+        "Annual Leave",
+        "Leave Policy",
+        "",
+        "Probation"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q019",
+      "type": "negation",
+      "answerable": true,
+      "question": "Is dental insurance included in my benefits?",
+      "answer": "No, dental cover is not included in the company medical insurance plan and is optional, costing 25 dollars per month. [1]",
+      "refused": false,
+      "retrieved": [
+        "Health Benefits",
+        "Acme Bank Leave and Benefits Policy",
+        "Meals",
+        "Mileage"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q020",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "How long do I have to report a lost laptop?",
+      "answer": "According to the provided context, lost or stolen devices must be reported to the service desk within 2 hours [1].",
+      "refused": false,
+      "retrieved": [
+        "Devices",
+        "Phishing and Incident Reporting",
+        "What should I do if my card is lost or stolen?",
+        "Acme Bank Travel and Expense Policy"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q021",
+      "type": "distractor",
+      "answerable": true,
+      "question": "Can I reuse an old password?",
+      "answer": "No, you cannot reuse the last 5 passwords. According to the Acme Bank Information Security Policy [1], \"the last 5 passwords cannot be reused.\"",
+      "refused": false,
+      "retrieved": [
+        "Passwords and Authentication",
+        "Password Policy",
+        "Remote Access",
+        "Devices"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q022",
+      "type": "paraphrase",
+      "answerable": true,
+      "question": "How quickly does the security team classify a breach report?",
+      "answer": "The security team will classify the incident within 24 hours. [1]",
+      "refused": false,
+      "retrieved": [
+        "Phishing and Incident Reporting",
+        "Devices",
+        "Data Classification",
+        "Acme Bank Travel and Expense Policy"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q023",
+      "type": "table",
+      "answerable": true,
+      "question": "What handling rules apply to customer account records?",
+      "answer": "According to the Acme Bank Information Security Policy, customer account records are classified as Confidential. The handling rules for Confidential data are: \"Encrypted, need-to-know access.\" [1]",
+      "refused": false,
+      "retrieved": [
+        "Data Classification",
+        "Devices",
+        "Phishing and Incident Reporting",
+        "Acme Bank Travel and Expense Policy"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q024",
+      "type": "reasoning",
+      "answerable": true,
+      "question": "Can I work from a cafe using public Wi-Fi?",
+      "answer": "No, you cannot work from a cafe using public Wi-Fi without the company VPN active. According to the Acme Bank Information Security Policy, public Wi-Fi may be used only with the VPN active.",
+      "refused": false,
+      "retrieved": [
+        "Remote Access",
+        "Devices",
+        "",
+        "Phishing and Incident Reporting"
+      ],
+      "facts_ok": true,
+      "faithful": true,
+      "verdict": "SUPPORTED"
+    },
+    {
+      "id": "q025",
+      "type": "cross-doc",
+      "answerable": true,
+      "question": "What time does the branch close on Saturday?",
+      "answer": "According to the provided context, branches are open on Saturdays from 10am to 1pm. Therefore, the branch closes on Saturday at 1pm. [1]",
+      "refused": false,
+      "retrieved": [
+        "What are the branch opening hours?",
+        "Branch Hours",
+        "",
+        "Annual Leave"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q026",
+      "type": "cross-doc",
+      "answerable": true,
+      "question": "How do I reset my password?",
+      "answer": "To reset your password, open the IT portal and choose Reset Credentials.",
+      "refused": false,
+      "retrieved": [
+        "Password Policy",
+        "Passwords and Authentication",
+        "What should I do if my card is lost or stolen?",
+        "How do I open a savings account?"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q027",
+      "type": "cross-doc",
+      "answerable": true,
+      "question": "Which extension do I call if I can't log in on my first day?",
+      "answer": "You should call the service desk on extension 4100 to reset your password or for IT assistance with logging in. [3]",
+      "refused": false,
+      "retrieved": [
+        "",
+        "What should I do if my card is lost or stolen?",
+        "Passwords and Authentication",
+        "Phishing and Incident Reporting"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q028",
+      "type": "negation",
+      "answerable": true,
+      "question": "Are alcoholic drinks covered on a business trip?",
+      "answer": "No, alcoholic drinks are not covered under the Acme Bank Travel and Expense Policy. According to the policy, \"Alcohol is not reimbursed under any circumstances.\" [1]",
+      "refused": false,
+      "retrieved": [
+        "Meals",
+        "Flights and Hotels",
+        "Acme Bank Travel and Expense Policy",
+        "Mileage"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q029",
+      "type": "reasoning",
+      "answerable": true,
+      "question": "I submitted my expense claim on the 25th. When do I get paid?",
+      "answer": "According to the Acme Bank Travel and Expense Policy, approved claims are paid with the next monthly payroll. Since you submitted your claim on the 25th, it will be paid the following month.",
+      "refused": false,
+      "retrieved": [
+        "Reimbursement Timeline",
+        "Acme Bank Travel and Expense Policy",
+        "Annual Leave",
+        "Health Benefits"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q030",
+      "type": "direct",
+      "answerable": true,
+      "question": "How much notice do I need to give to take annual leave?",
+      "answer": "According to the Acme Bank Leave and Benefits Policy, leave is requested through the HR portal at least 14 days in advance and must be approved by the line manager.",
+      "refused": false,
+      "retrieved": [
+        "Annual Leave",
+        "Leave Policy",
+        "Sick Leave",
+        "Probation"
+      ],
+      "facts_ok": true,
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q031",
+      "type": "near-miss",
+      "answerable": false,
+      "question": "What is the policy on working from another country for a month?",
+      "answer": "I don't know based on the provided documents.",
+      "refused": true,
+      "retrieved": [
+        "Acme Bank Travel and Expense Policy",
+        "Remote Access",
+        "Annual Leave",
+        "Probation"
+      ]
+    },
+    {
+      "id": "q032",
+      "type": "near-miss",
+      "answerable": false,
+      "question": "What is the fee for a domestic transfer to another bank?",
+      "answer": "I don't know based on the provided documents.",
+      "refused": true,
+      "retrieved": [
+        "Service charges",
+        "What are the transfer limits?",
+        "Account fees",
+        "How long do transfers take?"
+      ]
+    },
+    {
+      "id": "q033",
+      "type": "near-miss",
+      "answerable": false,
+      "question": "What is the mortgage interest rate?",
+      "answer": "I don't know based on the provided documents. There is no mention of mortgage interest rates in the context.",
+      "refused": true,
+      "retrieved": [
+        "What is the interest rate on savings accounts?",
+        "Account fees",
+        "Passwords and Authentication",
+        "Approval Limits"
+      ]
+    },
+    {
+      "id": "q034",
+      "type": "near-miss",
+      "answerable": false,
+      "question": "How many extra leave days do I get after 10 years of service?",
+      "answer": "According to the policy, full-time employees receive 20 days of annual leave per calendar year. However, the context does not specify any additional leave days after 10 years of service.",
+      "refused": false,
+      "retrieved": [
+        "Annual Leave",
+        "Sick Leave",
+        "Bereavement and Unpaid Leave",
+        "Probation"
+      ],
+      "faithful": false,
+      "verdict": "UNSUPPORTED"
+    },
+    {
+      "id": "q035",
+      "type": "near-miss",
+      "answerable": false,
+      "question": "What is the dress code in the office?",
+      "answer": "I don't know based on the provided documents.",
+      "refused": true,
+      "retrieved": [
+        "Acme Bank Employee Handbook",
+        "Data Classification",
+        "",
+        "Passwords and Authentication"
+      ]
+    },
+    {
+      "id": "q036",
+      "type": "unrelated",
+      "answerable": false,
+      "question": "What is the CEO's salary?",
+      "answer": "I don't know based on the provided documents.",
+      "refused": true,
+      "retrieved": [
+        "Meals",
+        "Mileage",
+        "What is the interest rate on savings accounts?",
+        "Approval Limits"
+      ]
+    }
+  ]
+}

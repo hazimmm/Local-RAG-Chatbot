@@ -5,15 +5,16 @@ from pathlib import Path
 
 results = Path(sys.argv[1] if len(sys.argv) > 1
                else "eval/results/gen_baseline.json")
+field = sys.argv[2] if len(sys.argv) > 2 else "faithful"
 rows = {r["id"]: r for r in json.loads(results.read_text(encoding="utf-8"))["rows"]}
 labels = json.loads(Path("eval/human_labels.json").read_text(encoding="utf-8"))["labels"]
 
 agree = tp = tn = fp = fn = 0
 for lab in labels:
     row = rows.get(lab["id"])
-    if row is None or "faithful" not in row:
+    if row is None or field not in row:
         continue
-    auto, truth = row["faithful"], lab["faithful"]
+    auto, truth = row[field], lab["faithful"]
     agree += auto == truth
     tp += (not auto) and (not truth)   # correctly flagged unfaithful
     tn += auto and truth               # correctly passed

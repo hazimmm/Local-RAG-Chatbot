@@ -1,9 +1,13 @@
+import sys
 from datetime import datetime
+from pathlib import Path
 
 import streamlit as st
 
-from frontend import api_client as api
-from frontend.styles import inject
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from frontend import api_client as api  # noqa: E402
+from frontend.styles import inject  # noqa: E402
 
 st.set_page_config(page_title="RAG Admin", page_icon="📚", layout="wide")
 inject()

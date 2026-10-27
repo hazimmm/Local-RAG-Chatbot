@@ -1,0 +1,103 @@
+[
+  {
+    "id": "l01", "type": "identifier", "answerable": true,
+    "question": "Who do I contact on extension 4500?",
+    "expected_answer": "The security office (security incidents).",
+    "relevant": [{"doc": "facilities_guide.docx", "heading": "Emergency Contacts"}],
+    "key_facts": ["security"]
+  },
+  {
+    "id": "l02", "type": "identifier", "answerable": true,
+    "question": "What is extension 4200 for?",
+    "expected_answer": "Leave and payroll (the HR team).",
+    "relevant": [{"doc": "onboarding_guide.pdf", "heading": ""}],
+    "key_facts": ["leave", "payroll"]
+  },
+  {
+    "id": "l03", "type": "identifier", "answerable": true,
+    "question": "Who answers 0800 555 0142?",
+    "expected_answer": "Acme Insurance, for a lost insurance card.",
+    "relevant": [{"doc": "insurance_faq.md", "heading": "insurance card is lost"}],
+    "key_facts": ["insurance"]
+  },
+  {
+    "id": "l04", "type": "identifier", "answerable": true,
+    "question": "What is the 0800 555 0199 number for?",
+    "expected_answer": "Reporting a lost or stolen bank card.",
+    "relevant": [{"doc": "customer_faq.md", "heading": "lost or stolen"}],
+    "key_facts": ["card"]
+  },
+  {
+    "id": "l05", "type": "identifier", "answerable": true,
+    "question": "Which service desk extension is 4100?",
+    "expected_answer": "The IT service desk.",
+    "relevant": [
+      {"doc": "onboarding_guide.pdf", "heading": ""},
+      {"doc": "it_security_policy.docx", "heading": "Passwords and Authentication"}
+    ],
+    "key_facts": ["it"]
+  },
+  {
+    "id": "l06", "type": "number", "answerable": true,
+    "question": "What is the 0.58 figure used for?",
+    "expected_answer": "Mileage reimbursement per kilometre for a personal car.",
+    "relevant": [{"doc": "expense_policy.docx", "heading": "Mileage"}],
+    "key_facts": ["mileage|kilomet"]
+  },
+  {
+    "id": "l07", "type": "number", "answerable": true,
+    "question": "What costs 25 dollars as a late payment charge?",
+    "expected_answer": "The late payment service fee is 25 dollars.",
+    "relevant": [{"doc": "fee_schedule.xlsx", "heading": "Service charges"}],
+    "key_facts": ["late payment"]
+  },
+  {
+    "id": "l08", "type": "number", "answerable": true,
+    "question": "What is limited to 1,000 dollars per day?",
+    "expected_answer": "The standard debit card ATM withdrawal limit.",
+    "relevant": [{"doc": "customer_faq.md", "heading": "daily withdrawal limits"}],
+    "key_facts": ["atm|withdraw"]
+  },
+  {
+    "id": "l09", "type": "number", "answerable": true,
+    "question": "Who signs off purchase orders over 5,000 dollars?",
+    "expected_answer": "The chief operating officer.",
+    "relevant": [{"doc": "procurement_policy.docx", "heading": "Purchase Order Approval Limits"}],
+    "key_facts": ["chief operating officer"]
+  },
+  {
+    "id": "l10", "type": "acronym", "answerable": true,
+    "question": "What is MFA mandatory for?",
+    "expected_answer": "Email, the VPN and the core banking system.",
+    "relevant": [{"doc": "it_security_policy.docx", "heading": "Passwords and Authentication"}],
+    "key_facts": ["email", "vpn"]
+  },
+  {
+    "id": "l11", "type": "rare-word", "answerable": true,
+    "question": "What is the Report Phish button?",
+    "expected_answer": "The button used to report suspicious emails.",
+    "relevant": [{"doc": "it_security_policy.docx", "heading": "Phishing and Incident Reporting"}],
+    "key_facts": ["suspicious"]
+  },
+  {
+    "id": "l12", "type": "rare-word", "answerable": true,
+    "question": "Where is Reset Credentials?",
+    "expected_answer": "In the IT portal, for resetting a forgotten password.",
+    "relevant": [{"doc": "handbook.docx", "heading": "Password Policy"}],
+    "key_facts": ["it portal"]
+  },
+  {
+    "id": "l13", "type": "rare-word", "answerable": true,
+    "question": "How many free ATM withdrawals does Basic Current include?",
+    "expected_answer": "4 free ATM withdrawals.",
+    "relevant": [{"doc": "fee_schedule.xlsx", "heading": "Account fees"}],
+    "key_facts": ["4"]
+  },
+  {
+    "id": "l14", "type": "identifier", "answerable": true,
+    "question": "What is extension 4400 used for?",
+    "expected_answer": "Building faults (the facilities desk).",
+    "relevant": [{"doc": "facilities_guide.docx", "heading": "Emergency Contacts"}],
+    "key_facts": ["facilities|faults"]
+  }
+]

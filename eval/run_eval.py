@@ -57,10 +57,12 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--k", type=int, default=5)
     parser.add_argument("--out", default=None, help="save JSON results here")
+    parser.add_argument("--qa", default="eval/qa_set.json",
+                        help="question file (default: the main golden set)")
     args = parser.parse_args()
 
     names = load_doc_names()
-    qa = json.loads(Path("eval/qa_set.json").read_text(encoding="utf-8"))
+    qa = json.loads(Path(args.qa).read_text(encoding="utf-8"))
     rows, unanswerable_dist = [], []
     for item in qa:
         results = search(item["question"], k=args.k)
@@ -101,9 +103,12 @@ def main() -> None:
             print(f"        got: {g}")
 
     ans_d = sum(r["top_dist"] for r in rows) / len(rows)
-    una_d = sum(unanswerable_dist) / len(unanswerable_dist)
-    print(f"\nMean top-1 distance: answerable={ans_d:.3f}  "
-          f"unanswerable={una_d:.3f}")
+    print(f"\nMean top-1 distance: answerable={ans_d:.3f}", end="")
+    if unanswerable_dist:
+        print(f"  unanswerable="
+              f"{sum(unanswerable_dist) / len(unanswerable_dist):.3f}")
+    else:
+        print()
 
     if args.out:
         Path(args.out).parent.mkdir(parents=True, exist_ok=True)

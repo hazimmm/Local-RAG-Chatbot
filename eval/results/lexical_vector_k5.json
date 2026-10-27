@@ -1,0 +1,224 @@
+{
+  "overall": {
+    "n": 14,
+    "hit@1": 0.7142857142857143,
+    "recall@1": 0.7142857142857143,
+    "hit@3": 0.7857142857142857,
+    "recall@3": 0.7857142857142857,
+    "hit@5": 0.9285714285714286,
+    "recall@5": 0.8928571428571429,
+    "mrr": 0.7821428571428571
+  },
+  "rows": [
+    {
+      "id": "l01",
+      "type": "identifier",
+      "question": "Who do I contact on extension 4500?",
+      "rank": 1,
+      "top_dist": 0.3669588565826416,
+      "got": [
+        "facilities_guide.docx | Emergency Contacts",
+        "insurance_faq.md | What should I do if my insurance card is lost?",
+        "customer_faq.md | What should I do if my card is lost or stolen?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l02",
+      "type": "identifier",
+      "question": "What is extension 4200 for?",
+      "rank": 5,
+      "top_dist": 0.4585249423980713,
+      "got": [
+        "facilities_guide.docx | Emergency Contacts",
+        "it_security_policy.docx | Remote Access",
+        "it_security_policy.docx | Passwords and Authentication"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l03",
+      "type": "identifier",
+      "question": "Who answers 0800 555 0142?",
+      "rank": 2,
+      "top_dist": 0.42944860458374023,
+      "got": [
+        "customer_faq.md | What should I do if my card is lost or stolen?",
+        "insurance_faq.md | What should I do if my insurance card is lost?",
+        "facilities_guide.docx | Guest Wi-Fi"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l04",
+      "type": "identifier",
+      "question": "What is the 0800 555 0199 number for?",
+      "rank": 1,
+      "top_dist": 0.4370822310447693,
+      "got": [
+        "customer_faq.md | What should I do if my card is lost or stolen?",
+        "facilities_guide.docx | Emergency Contacts",
+        "insurance_faq.md | What should I do if my insurance card is lost?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l05",
+      "type": "identifier",
+      "question": "Which service desk extension is 4100?",
+      "rank": 4,
+      "top_dist": 0.4230750799179077,
+      "got": [
+        "facilities_guide.docx | Emergency Contacts",
+        "it_security_policy.docx | Devices",
+        "it_security_policy.docx | Remote Access"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.5
+    },
+    {
+      "id": "l06",
+      "type": "number",
+      "question": "What is the 0.58 figure used for?",
+      "rank": null,
+      "top_dist": 0.43627476692199707,
+      "got": [
+        "procurement_policy.docx | Purchase Order Approval Limits",
+        "expense_policy.docx | Approval Limits",
+        "it_security_policy.docx | Data Classification"
+      ],
+      "recall@1": 0.0,
+      "recall@3": 0.0,
+      "recall@5": 0.0
+    },
+    {
+      "id": "l07",
+      "type": "number",
+      "question": "What costs 25 dollars as a late payment charge?",
+      "rank": 1,
+      "top_dist": 0.3290987014770508,
+      "got": [
+        "fee_schedule.xlsx | Service charges",
+        "procurement_policy.docx | Supplier Invoices",
+        "expense_policy.docx | Acme Bank Travel and Expense Policy"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l08",
+      "type": "number",
+      "question": "What is limited to 1,000 dollars per day?",
+      "rank": 1,
+      "top_dist": 0.2912825345993042,
+      "got": [
+        "customer_faq.md | What are the daily withdrawal limits?",
+        "customer_faq.md | What are the transfer limits?",
+        "expense_policy.docx | Approval Limits"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l09",
+      "type": "number",
+      "question": "Who signs off purchase orders over 5,000 dollars?",
+      "rank": 1,
+      "top_dist": 0.3177717924118042,
+      "got": [
+        "procurement_policy.docx | Purchase Order Approval Limits",
+        "expense_policy.docx | Approval Limits",
+        "procurement_policy.docx | Supplier Travel"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l10",
+      "type": "acronym",
+      "question": "What is MFA mandatory for?",
+      "rank": 1,
+      "top_dist": 0.35616421699523926,
+      "got": [
+        "it_security_policy.docx | Passwords and Authentication",
+        "it_security_policy.docx | Devices",
+        "it_security_policy.docx | Remote Access"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l11",
+      "type": "rare-word",
+      "question": "What is the Report Phish button?",
+      "rank": 1,
+      "top_dist": 0.28952670097351074,
+      "got": [
+        "it_security_policy.docx | Phishing and Incident Reporting",
+        "it_security_policy.docx | Devices",
+        "it_security_policy.docx | Remote Access"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l12",
+      "type": "rare-word",
+      "question": "Where is Reset Credentials?",
+      "rank": 1,
+      "top_dist": 0.3291914463043213,
+      "got": [
+        "handbook.docx | Password Policy",
+        "it_security_policy.docx | Passwords and Authentication",
+        "facilities_guide.docx | Guest Wi-Fi"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l13",
+      "type": "rare-word",
+      "question": "How many free ATM withdrawals does Basic Current include?",
+      "rank": 1,
+      "top_dist": 0.2041867971420288,
+      "got": [
+        "fee_schedule.xlsx | Account fees",
+        "customer_faq.md | What are the daily withdrawal limits?",
+        "customer_faq.md | What are the transfer limits?"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    },
+    {
+      "id": "l14",
+      "type": "identifier",
+      "question": "What is extension 4400 used for?",
+      "rank": 1,
+      "top_dist": 0.42428284883499146,
+      "got": [
+        "facilities_guide.docx | Emergency Contacts",
+        "it_security_policy.docx | Remote Access",
+        "it_security_policy.docx | Passwords and Authentication"
+      ],
+      "recall@1": 1.0,
+      "recall@3": 1.0,
+      "recall@5": 1.0
+    }
+  ]
+}

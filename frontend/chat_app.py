@@ -13,6 +13,11 @@ st.set_page_config(page_title="Knowledge Assistant", page_icon="💬")
 inject()
 
 REFUSAL_PREFIX = "I don't know based on"
+STAGES = {
+    "understanding": "🧠 Understanding your question…",
+    "searching": "🔎 Searching the knowledge base…",
+    "writing": "✍️ Writing the answer…",
+}
 
 
 def init_state() -> None:
@@ -138,7 +143,7 @@ def answer_question(question: str) -> None:
     captured = {"sources": [], "rewritten": None}
     with st.chat_message("assistant"):
         waiting = st.empty()
-        waiting.caption("🔎 Searching the knowledge base…")
+        waiting.caption(STAGES["searching"])
 
         def tokens():
             for event in api.chat_stream(
@@ -146,10 +151,12 @@ def answer_question(question: str) -> None:
             ):
                 if event["type"] == "meta":
                     st.session_state.session_id = event["session_id"]
-                    captured["rewritten"] = event.get("rewritten")
+                elif event["type"] == "status":
+                    waiting.caption(STAGES[event["stage"]])
+                elif event["type"] == "rewritten":
+                    captured["rewritten"] = event["rewritten"]
                 elif event["type"] == "sources":
                     captured["sources"] = event["sources"]
-                    waiting.caption("✍️ Writing the answer…")
                 elif event["type"] == "token":
                     waiting.empty()
                     yield event["token"]

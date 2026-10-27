@@ -64,26 +64,28 @@ def chat(
     db.commit()
     session_id = session.id
 
-    rewritten = rewrite_question(history, req.question)
-    sources, tokens = answer_stream(req.question, req.k, rewritten)
-
     def events():
         parts: list[str] = []
+        sources: list[dict] = []
+        tokens = None
         try:
-            yield sse(
-                {
-                    "type": "meta",
-                    "session_id": session_id,
-                    "rewritten": rewritten,
-                }
-            )
+            yield sse({"type": "meta", "session_id": session_id})
+            rewritten = req.question
+            if history:
+                yield sse({"type": "status", "stage": "understanding"})
+                rewritten = rewrite_question(history, req.question)
+                yield sse({"type": "rewritten", "rewritten": rewritten})
+            yield sse({"type": "status", "stage": "searching"})
+            sources, tokens = answer_stream(req.question, req.k, rewritten)
             yield sse({"type": "sources", "sources": sources})
+            yield sse({"type": "status", "stage": "writing"})
             for t in tokens:
                 parts.append(t)
                 yield sse({"type": "token", "token": t})
             yield "data: [DONE]\n\n"
         finally:
-            tokens.close()
+            if tokens is not None:
+                tokens.close()
             if parts:
                 save_assistant_message(session_id, "".join(parts), sources)
 

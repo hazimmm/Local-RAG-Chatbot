@@ -1,0 +1,26 @@
+[
+  {
+    "id": "q001",
+    "question": "How many days of sick leave do employees get?",
+    "expected_answer": "10 days of paid sick leave per year.",
+    "source_doc": "hr_leave_and_benefits.docx",
+    "source_heading": "Sick Leave",
+    "answerable": true
+  },
+  {
+    "id": "q002",
+    "question": "What is the hotel cap per night in major cities?",
+    "expected_answer": "180 dollars per night.",
+    "source_doc": "expense_policy.docx",
+    "source_heading": "Flights and Hotels",
+    "answerable": true
+  },
+  {
+    "id": "q003",
+    "question": "What is the CEO's salary?",
+    "expected_answer": null,
+    "source_doc": null,
+    "source_heading": null,
+    "answerable": false
+  }
+]

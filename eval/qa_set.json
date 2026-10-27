@@ -1,26 +1,552 @@
 [
   {
     "id": "q001",
-    "question": "How many days of sick leave do employees get?",
-    "expected_answer": "10 days of paid sick leave per year.",
-    "source_doc": "hr_leave_and_benefits.docx",
-    "source_heading": "Sick Leave",
-    "answerable": true
+    "question": "If I'm ill for a week, when does the company want a doctor's note?",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_answer": "A medical certificate is required when sick leave lasts more than 3 consecutive days.",
+    "relevant": [
+      {
+        "doc": "hr_leave_and_benefits.docx",
+        "heading": "Sick Leave"
+      }
+    ],
+    "key_facts": [
+      "3"
+    ]
   },
   {
     "id": "q002",
-    "question": "What is the hotel cap per night in major cities?",
-    "expected_answer": "180 dollars per night.",
-    "source_doc": "expense_policy.docx",
-    "source_heading": "Flights and Hotels",
-    "answerable": true
+    "question": "What's the most I can spend on a room per night when travelling to a big city?",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_answer": "180 dollars per night in major cities.",
+    "relevant": [
+      {
+        "doc": "expense_policy.docx",
+        "heading": "Flights and Hotels"
+      }
+    ],
+    "key_facts": [
+      "180"
+    ]
   },
   {
     "id": "q003",
-    "question": "What is the CEO's salary?",
+    "question": "Who needs to sign off on a 1,500 dollar expense?",
+    "type": "table",
+    "answerable": true,
+    "expected_answer": "The department head (201 to 2,000 dollars).",
+    "relevant": [
+      {
+        "doc": "expense_policy.docx",
+        "heading": "Approval Limits"
+      }
+    ],
+    "key_facts": [
+      "department head"
+    ]
+  },
+  {
+    "id": "q004",
+    "question": "Who approves spending of exactly 2,000 dollars?",
+    "type": "boundary",
+    "answerable": true,
+    "expected_answer": "The department head, since the band is 201 to 2,000 dollars.",
+    "relevant": [
+      {
+        "doc": "expense_policy.docx",
+        "heading": "Approval Limits"
+      }
+    ],
+    "key_facts": [
+      "department head"
+    ]
+  },
+  {
+    "id": "q005",
+    "question": "How many free ATM withdrawals come with the Plus Current account?",
+    "type": "table",
+    "answerable": true,
+    "expected_answer": "10 free ATM withdrawals.",
+    "relevant": [
+      {
+        "doc": "fee_schedule.xlsx",
+        "heading": "Account fees"
+      }
+    ],
+    "key_facts": [
+      "10"
+    ]
+  },
+  {
+    "id": "q006",
+    "question": "Which account has no monthly fee but needs at least 100 dollars kept in it?",
+    "type": "table",
+    "answerable": true,
+    "expected_answer": "The Everyday Saver.",
+    "relevant": [
+      {
+        "doc": "fee_schedule.xlsx",
+        "heading": "Account fees"
+      }
+    ],
+    "key_facts": [
+      "everyday saver"
+    ]
+  },
+  {
+    "id": "q007",
+    "question": "How much does it cost to get a new cheque book?",
+    "type": "numeric",
+    "answerable": true,
+    "expected_answer": "12 dollars.",
+    "relevant": [
+      {
+        "doc": "fee_schedule.xlsx",
+        "heading": "Service charges"
+      }
+    ],
+    "key_facts": [
+      "12"
+    ]
+  },
+  {
+    "id": "q008",
+    "question": "How much is a replacement debit card?",
+    "type": "distractor",
+    "answerable": true,
+    "expected_answer": "10 dollars.",
+    "relevant": [
+      {
+        "doc": "fee_schedule.xlsx",
+        "heading": "Service charges"
+      }
+    ],
+    "key_facts": [
+      "10"
+    ]
+  },
+  {
+    "id": "q009",
+    "question": "What do I do right away if my card gets stolen?",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_answer": "Freeze the card in the mobile app, then call 0800 555 0199.",
+    "relevant": [
+      {
+        "doc": "customer_faq.md",
+        "heading": "lost or stolen"
+      }
+    ],
+    "key_facts": [
+      "freeze",
+      "0800 555 0199"
+    ]
+  },
+  {
+    "id": "q010",
+    "question": "How long until my money arrives when I send it abroad?",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_answer": "International transfers take 2 to 4 business days.",
+    "relevant": [
+      {
+        "doc": "customer_faq.md",
+        "heading": "How long do transfers take"
+      }
+    ],
+    "key_facts": [
+      "2",
+      "4"
+    ]
+  },
+  {
+    "id": "q011",
+    "question": "Can I transfer 40,000 dollars online in one day?",
+    "type": "reasoning",
+    "answerable": true,
+    "expected_answer": "No. Online transfers are limited to 25,000 dollars per day; higher amounts need a branch visit.",
+    "relevant": [
+      {
+        "doc": "customer_faq.md",
+        "heading": "transfer limits"
+      }
+    ],
+    "key_facts": [
+      "25,000"
+    ]
+  },
+  {
+    "id": "q012",
+    "question": "What is the interest rate for the Premium Saver?",
+    "type": "distractor",
+    "answerable": true,
+    "expected_answer": "3.4 percent per year for balances above 10,000 dollars.",
+    "relevant": [
+      {
+        "doc": "customer_faq.md",
+        "heading": "interest rate"
+      }
+    ],
+    "key_facts": [
+      "3.4"
+    ]
+  },
+  {
+    "id": "q013",
+    "question": "Who should a new hire contact with expense questions?",
+    "type": "pdf",
+    "answerable": true,
+    "expected_answer": "The Finance team, extension 4300.",
+    "relevant": [
+      {
+        "doc": "onboarding_guide.pdf",
+        "heading": ""
+      }
+    ],
+    "key_facts": [
+      "4300"
+    ]
+  },
+  {
+    "id": "q014",
+    "question": "What happens if a new employee doesn't finish their mandatory training?",
+    "type": "pdf",
+    "answerable": true,
+    "expected_answer": "System access may be delayed; training must be completed within 30 days.",
+    "relevant": [
+      {
+        "doc": "onboarding_guide.pdf",
+        "heading": ""
+      }
+    ],
+    "key_facts": [
+      "access"
+    ]
+  },
+  {
+    "id": "q015",
+    "question": "Between what times can I start work if I arrange flexible hours?",
+    "type": "pdf",
+    "answerable": true,
+    "expected_answer": "Between 7:30am and 9:30am, agreed with the manager.",
+    "relevant": [
+      {
+        "doc": "onboarding_guide.pdf",
+        "heading": ""
+      }
+    ],
+    "key_facts": [
+      "7:30",
+      "9:30"
+    ]
+  },
+  {
+    "id": "q016",
+    "question": "Can I carry over leave to next year?",
+    "type": "direct",
+    "answerable": true,
+    "expected_answer": "Up to 5 unused days, which expire on 31 March.",
+    "relevant": [
+      {
+        "doc": "hr_leave_and_benefits.docx",
+        "heading": "Annual Leave"
+      }
+    ],
+    "key_facts": [
+      "5",
+      "31 march"
+    ]
+  },
+  {
+    "id": "q017",
+    "question": "How many weeks of parental leave does the non-primary caregiver get?",
+    "type": "distractor",
+    "answerable": true,
+    "expected_answer": "4 weeks.",
+    "relevant": [
+      {
+        "doc": "hr_leave_and_benefits.docx",
+        "heading": "Parental Leave"
+      }
+    ],
+    "key_facts": [
+      "4"
+    ]
+  },
+  {
+    "id": "q018",
+    "question": "When can new hires start using their annual leave?",
+    "type": "reasoning",
+    "answerable": true,
+    "expected_answer": "Only after the 3-month probation ends, unless the manager approves earlier.",
+    "relevant": [
+      {
+        "doc": "hr_leave_and_benefits.docx",
+        "heading": "Probation"
+      }
+    ],
+    "key_facts": [
+      "probation"
+    ]
+  },
+  {
+    "id": "q019",
+    "question": "Is dental insurance included in my benefits?",
+    "type": "negation",
+    "answerable": true,
+    "expected_answer": "No, dental cover is optional and costs 25 dollars per month.",
+    "relevant": [
+      {
+        "doc": "hr_leave_and_benefits.docx",
+        "heading": "Health Benefits"
+      }
+    ],
+    "key_facts": [
+      "25"
+    ]
+  },
+  {
+    "id": "q020",
+    "question": "How long do I have to report a lost laptop?",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_answer": "Within 2 hours.",
+    "relevant": [
+      {
+        "doc": "it_security_policy.docx",
+        "heading": "Devices"
+      }
+    ],
+    "key_facts": [
+      "2 hours"
+    ]
+  },
+  {
+    "id": "q021",
+    "question": "Can I reuse an old password?",
+    "type": "distractor",
+    "answerable": true,
+    "expected_answer": "The last 5 passwords cannot be reused.",
+    "relevant": [
+      {
+        "doc": "it_security_policy.docx",
+        "heading": "Passwords and Authentication"
+      }
+    ],
+    "key_facts": [
+      "5"
+    ]
+  },
+  {
+    "id": "q022",
+    "question": "How quickly does the security team classify a breach report?",
+    "type": "paraphrase",
+    "answerable": true,
+    "expected_answer": "Within 24 hours.",
+    "relevant": [
+      {
+        "doc": "it_security_policy.docx",
+        "heading": "Phishing and Incident Reporting"
+      }
+    ],
+    "key_facts": [
+      "24"
+    ]
+  },
+  {
+    "id": "q023",
+    "question": "What handling rules apply to customer account records?",
+    "type": "table",
+    "answerable": true,
+    "expected_answer": "They are Confidential: encrypted, with need-to-know access.",
+    "relevant": [
+      {
+        "doc": "it_security_policy.docx",
+        "heading": "Data Classification"
+      }
+    ],
+    "key_facts": [
+      "encrypted"
+    ]
+  },
+  {
+    "id": "q024",
+    "question": "Can I work from a cafe using public Wi-Fi?",
+    "type": "reasoning",
+    "answerable": true,
+    "expected_answer": "Only with the company VPN active.",
+    "relevant": [
+      {
+        "doc": "it_security_policy.docx",
+        "heading": "Remote Access"
+      }
+    ],
+    "key_facts": [
+      "vpn"
+    ]
+  },
+  {
+    "id": "q025",
+    "question": "What time does the branch close on Saturday?",
+    "type": "cross-doc",
+    "answerable": true,
+    "expected_answer": "1pm (open 10am to 1pm).",
+    "relevant": [
+      {
+        "doc": "handbook.docx",
+        "heading": "Branch Hours"
+      },
+      {
+        "doc": "customer_faq.md",
+        "heading": "branch opening hours"
+      }
+    ],
+    "key_facts": [
+      "1pm"
+    ]
+  },
+  {
+    "id": "q026",
+    "question": "How do I reset my password?",
+    "type": "cross-doc",
+    "answerable": true,
+    "expected_answer": "Use the IT portal (Reset Credentials), or call the service desk on extension 4100.",
+    "relevant": [
+      {
+        "doc": "handbook.docx",
+        "heading": "Password Policy"
+      },
+      {
+        "doc": "it_security_policy.docx",
+        "heading": "Passwords and Authentication"
+      }
+    ],
+    "key_facts": [
+      "it portal"
+    ]
+  },
+  {
+    "id": "q027",
+    "question": "Which extension do I call if I can't log in on my first day?",
+    "type": "cross-doc",
+    "answerable": true,
+    "expected_answer": "The IT service desk, extension 4100.",
+    "relevant": [
+      {
+        "doc": "onboarding_guide.pdf",
+        "heading": ""
+      },
+      {
+        "doc": "it_security_policy.docx",
+        "heading": "Passwords and Authentication"
+      }
+    ],
+    "key_facts": [
+      "4100"
+    ]
+  },
+  {
+    "id": "q028",
+    "question": "Are alcoholic drinks covered on a business trip?",
+    "type": "negation",
+    "answerable": true,
+    "expected_answer": "No, alcohol is never reimbursed.",
+    "relevant": [
+      {
+        "doc": "expense_policy.docx",
+        "heading": "Meals"
+      }
+    ],
+    "key_facts": [
+      "not"
+    ]
+  },
+  {
+    "id": "q029",
+    "question": "I submitted my expense claim on the 25th. When do I get paid?",
+    "type": "reasoning",
+    "answerable": true,
+    "expected_answer": "In the following month's payroll, since claims after the 20th roll over.",
+    "relevant": [
+      {
+        "doc": "expense_policy.docx",
+        "heading": "Reimbursement Timeline"
+      }
+    ],
+    "key_facts": [
+      "following month"
+    ]
+  },
+  {
+    "id": "q030",
+    "question": "How much notice do I need to give to take annual leave?",
+    "type": "direct",
+    "answerable": true,
+    "expected_answer": "At least 14 days in advance, through the HR portal, with manager approval.",
+    "relevant": [
+      {
+        "doc": "hr_leave_and_benefits.docx",
+        "heading": "Annual Leave"
+      }
+    ],
+    "key_facts": [
+      "14"
+    ]
+  },
+  {
+    "id": "q031",
+    "question": "What is the policy on working from another country for a month?",
+    "type": "near-miss",
+    "answerable": false,
     "expected_answer": null,
-    "source_doc": null,
-    "source_heading": null,
-    "answerable": false
+    "relevant": [],
+    "key_facts": []
+  },
+  {
+    "id": "q032",
+    "question": "What is the fee for a domestic transfer to another bank?",
+    "type": "near-miss",
+    "answerable": false,
+    "expected_answer": null,
+    "relevant": [],
+    "key_facts": []
+  },
+  {
+    "id": "q033",
+    "question": "What is the mortgage interest rate?",
+    "type": "near-miss",
+    "answerable": false,
+    "expected_answer": null,
+    "relevant": [],
+    "key_facts": []
+  },
+  {
+    "id": "q034",
+    "question": "How many extra leave days do I get after 10 years of service?",
+    "type": "near-miss",
+    "answerable": false,
+    "expected_answer": null,
+    "relevant": [],
+    "key_facts": []
+  },
+  {
+    "id": "q035",
+    "question": "What is the dress code in the office?",
+    "type": "near-miss",
+    "answerable": false,
+    "expected_answer": null,
+    "relevant": [],
+    "key_facts": []
+  },
+  {
+    "id": "q036",
+    "question": "What is the CEO's salary?",
+    "type": "unrelated",
+    "answerable": false,
+    "expected_answer": null,
+    "relevant": [],
+    "key_facts": []
   }
 ]

@@ -1,0 +1,222 @@
+{
+  "labeled_by": "Claude (reviewed against the retrieved context); spot-check before citing",
+  "labels": [
+    {
+      "id": "q001",
+      "faithful": false,
+      "correct": true,
+      "complete": true,
+      "note": "Adds an invented detail: 'the 4th day of absence'. The policy only says a certificate is required when sick leave lasts more than 3 consecutive days."
+    },
+    {
+      "id": "q002",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q003",
+      "faithful": false,
+      "correct": false,
+      "complete": false,
+      "note": "Contradicts the table: says the line manager approves up to 2,000 dollars. The table gives line manager up to 200 and department head for 201 to 2,000."
+    },
+    {
+      "id": "q004",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q005",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q006",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q007",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q008",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q009",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q010",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q011",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q012",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q013",
+      "faithful": true,
+      "correct": true,
+      "complete": false,
+      "note": "Names the Finance team but omits extension 4300."
+    },
+    {
+      "id": "q014",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q015",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q016",
+      "faithful": true,
+      "correct": true,
+      "complete": false,
+      "note": "Omits that carried-over days expire on 31 March."
+    },
+    {
+      "id": "q017",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q018",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q019",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q020",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q021",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q022",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q023",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q024",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q025",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q026",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q027",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q028",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q029",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q030",
+      "faithful": true,
+      "correct": true,
+      "complete": true,
+      "note": ""
+    },
+    {
+      "id": "q034",
+      "faithful": true,
+      "correct": null,
+      "complete": true,
+      "note": "Unanswerable question. Soft refusal: states the 20 day base entitlement (supported) and says nothing is specified for 10 years of service. Acceptable."
+    }
+  ]
+}
